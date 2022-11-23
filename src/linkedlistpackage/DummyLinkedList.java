@@ -84,7 +84,6 @@ public class DummyLinkedList {
         current.next = null;
     }
 
-
     private boolean isEmpty() {
         return head == null;
     }
