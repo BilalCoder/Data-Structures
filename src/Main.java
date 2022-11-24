@@ -1,6 +1,7 @@
 import linkedlistpackage.DummyLinkedList;
 
 import java.text.ParseException;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws ParseException {
@@ -23,15 +24,18 @@ public class Main {
         // Validating LinkedLists
         DummyLinkedList linkedList = new DummyLinkedList();
         System.out.println(linkedList.indexOf(4));
-        linkedList.removeLast();
+        //linkedList.removeLast();
         linkedList.print();
         //linkedList.removeFirst(); // custom exception
         linkedList.print();
+        System.out.println(linkedList.size());
         linkedList.addFirst(1);
+        System.out.println(linkedList.size());
         linkedList.removeFirst();
         linkedList.print();
         linkedList.addFirst(2);
         linkedList.addFirst(3);
+        System.out.println(linkedList.size());
         linkedList.print();
         linkedList.addLast(4);
         linkedList.addLast(5);
@@ -51,5 +55,15 @@ public class Main {
         linkedList.print();
         linkedList.removeLast();
         linkedList.print();
+        // To Convert list to array;
+//        int[] arr = linkedList.toArray();
+//        System.out.println(Arrays.toString(arr));
+        linkedList.reverse();
+        linkedList.print();
+        System.out.println(linkedList.getKthNodeFromEnd(6));
+        System.out.println(linkedList.getKthNodeFromEnd(1));
+        System.out.println(linkedList.getKthNodeFromEnd(3));
+        System.out.println(linkedList.getKthNodeFromEnd(4));
+
     }
 }
