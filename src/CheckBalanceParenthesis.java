@@ -2,6 +2,8 @@ import java.util.*;
 
 public class CheckBalanceParenthesis {
 
+    // Implementation of checking balanced parenthesis using stack
+
     private List leftBrackets = Arrays.asList('(', '[', '{', '<');
     private List rightBrackets = Arrays.asList(')', ']', '}', '>');
 
