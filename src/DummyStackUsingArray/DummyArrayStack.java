@@ -8,7 +8,7 @@ public class DummyArrayStack {
 
     public void push(int value) {
         if (topIndex == array.length-1)
-            throw new StackOverflowError("Cannot push into ull stack");
+            throw new StackOverflowError("Cannot push into full stack");
         array[++topIndex] = value;
     }
 
