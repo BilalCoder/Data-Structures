@@ -53,5 +53,33 @@ public class Main {
         System.out.println("Front - " + dummyCircularArrayQueue.peek());
         System.out.println(dummyCircularArrayQueue);
 
+
+        System.out.println("======================================================================");
+        System.out.println("**********************************************************************");
+        System.out.println("======================================================================");
+
+
+        // Queue implementation using 2 stacks
+        DummyQueueUsing2Stacks dummyQueueUsing2Stacks = new DummyQueueUsing2Stacks();
+        System.out.println(dummyQueueUsing2Stacks.isEmpty());
+        dummyQueueUsing2Stacks.enqueue(1);
+        dummyQueueUsing2Stacks.enqueue(2);
+        dummyQueueUsing2Stacks.enqueue(3);
+        System.out.println(dummyQueueUsing2Stacks.peek());
+        System.out.println("Deleted Item - " + dummyQueueUsing2Stacks.dequeue());
+        System.out.println("Deleted Item - " + dummyQueueUsing2Stacks.dequeue());
+        System.out.println("Deleted Item - " + dummyQueueUsing2Stacks.dequeue());
+        dummyQueueUsing2Stacks.enqueue(4);
+        dummyQueueUsing2Stacks.enqueue(5);
+        System.out.println("Deleted Item - " + dummyQueueUsing2Stacks.dequeue());
+        dummyQueueUsing2Stacks.enqueue(6);
+        dummyQueueUsing2Stacks.enqueue(7);
+        System.out.println(dummyQueueUsing2Stacks.peek());
+        dummyQueueUsing2Stacks.enqueue(9);
+        dummyQueueUsing2Stacks.enqueue(10);
+        System.out.println("Deleted Item - " + dummyQueueUsing2Stacks.dequeue());
+        System.out.println("Deleted Item - " + dummyQueueUsing2Stacks.dequeue());
+        System.out.println(dummyQueueUsing2Stacks.peek());
+
     }
 }
