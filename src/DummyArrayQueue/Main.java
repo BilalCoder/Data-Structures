@@ -81,5 +81,17 @@ public class Main {
         System.out.println("Deleted Item - " + dummyQueueUsing2Stacks.dequeue());
         System.out.println(dummyQueueUsing2Stacks.peek());
 
+
+        //PriorityQueue using arrays
+        DummyPriorityQueueUsingArray dummyPriorityQueueUsingArray = new DummyPriorityQueueUsingArray();
+        dummyPriorityQueueUsingArray.add(3);
+        dummyPriorityQueueUsingArray.add(5);
+        dummyPriorityQueueUsingArray.add(1);
+        dummyPriorityQueueUsingArray.add(8);
+        dummyPriorityQueueUsingArray.add(2);
+        System.out.println(dummyPriorityQueueUsingArray.isFull());
+        System.out.println(dummyPriorityQueueUsingArray.remove());
+        dummyPriorityQueueUsingArray.add(0);
+        System.out.println(dummyPriorityQueueUsingArray.toString());
     }
 }
