@@ -16,6 +16,11 @@ public class Main {
         System.out.println(tree.find(101));
         System.out.println(tree.find(1));
         System.out.println(tree.find(2));
-
+        tree.traversePreOrder();
+        System.out.println();
+        tree.traverseInOrder();
+        System.out.println();
+        tree.traversePostOrder();
+        System.out.println();
     }
 }
