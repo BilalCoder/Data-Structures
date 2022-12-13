@@ -22,6 +22,19 @@ public class Main {
         System.out.println();
         tree.traversePostOrder();
         System.out.println();
-        System.out.println(tree.height());
+        System.out.println("Height - " + tree.height());
+        System.out.println("Min value in normal Binary tree(general method)- " + tree.minValueInBST());
+        //System.out.println("Min value in BST (specific for BST)- " + tree.minValueInNormalBinaryTree());
+
+        Tree tree1 = new Tree();
+        tree1.insert(7);
+        tree1.insert(4);
+        tree1.insert(9);
+        tree1.insert(1);
+        tree1.insert(6);
+        tree1.insert(8);
+        tree1.insert(10);
+
+        System.out.println("Tree1 equals tree2 - " + tree.equals(tree));
     }
 }

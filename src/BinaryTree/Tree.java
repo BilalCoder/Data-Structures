@@ -93,12 +93,51 @@ public class Tree {
     public int height(Node root) {
         if(root == null)
             return -1;
-        if(root.left == null && root.right == null)
+        if(isEmpty())
             return 0;
         return 1 + Math.max(height(root.left), height(root.right));
     }
 
     public boolean isEmpty() {
         return root == null;
+    }
+
+    public boolean isLeaf(Node node) {
+        return root.left == null && root.right == null;
+    }
+
+    //need to traverse all nodes (for normal trees) O(n)
+    public int minValueInNormalBinaryTree() {
+        return minValueInNormalBinaryTree(root);
+    }
+    private int minValueInNormalBinaryTree(Node root) {
+        if(isLeaf(root))
+            return root.value;
+        int left = minValueInNormalBinaryTree(root.left);
+        int right = minValueInNormalBinaryTree(root.right);
+        return Math.min(Math.min(left, right), root.value);
+    }
+
+    //Need to traverse to leftmost node of tree and takes O(log n) in case of BST
+    public int minValueInBST() {
+        Node current = root;
+        while (current.left != null) {
+            current = current.left;
+        }
+        return current.value;
+    }
+
+    public boolean equals(Tree other) {
+        if (other == null)
+            return false;
+        return equals(root, other.root);
+    }
+
+    private boolean equals(Node first, Node second) {
+        if (first == null && second == null)
+            return true;
+        if (first != null && second != null)
+            return first.value == second.value && equals(first.left, second.left) && equals(first.right, second.right);
+        return false;
     }
 }

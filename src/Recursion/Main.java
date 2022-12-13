@@ -1,2 +1,9 @@
-package Recursion;public class Main {
+package Recursion;
+
+public class Main {
+    public static void main(String[] args) {
+        RecursiveFunctions recursiveFunctions = new RecursiveFunctions();
+        System.out.println(recursiveFunctions.calculateExponent(10, 3));
+        System.out.println(recursiveFunctions.reverseString("hello"));
+    }
 }
