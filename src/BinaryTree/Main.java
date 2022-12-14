@@ -36,5 +36,10 @@ public class Main {
         tree1.insert(10);
 
         System.out.println("Tree1 equals tree2 - " + tree.equals(tree));
+
+        System.out.println("Nodes at distance 2 from root = ");
+        tree1.printNodesAtDistance(2);
+
+        tree1.levelOrderTraversal();
     }
 }

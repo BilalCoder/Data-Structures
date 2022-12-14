@@ -140,4 +140,26 @@ public class Tree {
             return first.value == second.value && equals(first.left, second.left) && equals(first.right, second.right);
         return false;
     }
+
+    public void printNodesAtDistance(int distance) {
+        printNodesAtDistance(root, distance);
+    }
+    private void printNodesAtDistance(Node root, int distance) {
+       if(root == null)
+           return;
+       if(distance == 0) {
+           System.out.println(root.value);
+           return;
+       }
+       printNodesAtDistance(root.left, distance-1);
+       printNodesAtDistance(root.right, distance-1);
+    }
+
+    //This is the loop solution. FOr recursive solution using the loop, refer mycodeschool
+    public void levelOrderTraversal() {
+        for(int i=0; i<=height(); i++) {
+            System.out.println("Nodes at level " + i);
+            printNodesAtDistance(i);
+        }
+    }
 }
