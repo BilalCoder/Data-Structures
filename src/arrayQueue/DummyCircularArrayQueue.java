@@ -1,13 +1,18 @@
-package DummyArrayQueue;
+package arrayQueue;
 
 import java.util.Arrays;
 
-public class DummyArrayQueue {
-    int[] queue = new int[5];
+public class DummyCircularArrayQueue {
+    int[] queue;
+
+    public DummyCircularArrayQueue(int size) {
+        queue = new int[size];
+    }
     int front = 0;
     int rear = 0;
+    int count = 0;
     public boolean isEmpty() {
-        return front == rear;
+        return count == 0;
     }
 
     public int peek() {
@@ -20,21 +25,26 @@ public class DummyArrayQueue {
         if (isFull()) {
             throw new IllegalStateException("Queue is full");
         }
-        queue[rear++] = value;
+        queue[rear] = value;
+        rear = (rear + 1) % queue.length;
+        count++;
     }
 
     public int deque() {
         if(isEmpty())
             throw new IllegalArgumentException("Queue is empty");
-        return queue[front++];
+        int item = queue[front];
+        queue[front] = 0;
+        front = (front + 1) % queue.length;
+        count--;
+        return item;
     }
 
     public boolean isFull() {
-        return rear - front == queue.length - 1;
+        return count == queue.length;
     }
 
     public String toString() {
-        var queueContent = Arrays.copyOfRange(queue, front, rear);
-        return Arrays.toString(queueContent);
+        return Arrays.toString(queue);
     }
 }

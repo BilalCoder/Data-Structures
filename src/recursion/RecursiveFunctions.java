@@ -1,4 +1,4 @@
-package Recursion;
+package recursion;
 
 public class RecursiveFunctions {
     public int calculateExponent(int number, int power) {

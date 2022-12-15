@@ -1,4 +1,4 @@
-package DummyHashMaps;
+package hashMaps;
 
 
 // Get the first non repeating character from the string

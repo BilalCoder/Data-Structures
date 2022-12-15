@@ -1,4 +1,4 @@
-package DummyHashMaps;
+package hashMaps;
 
 import java.util.HashSet;
 import java.util.Set;

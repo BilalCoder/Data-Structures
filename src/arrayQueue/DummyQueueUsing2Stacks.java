@@ -1,4 +1,4 @@
-package DummyArrayQueue;
+package arrayQueue;
 
 import java.util.Stack;
 

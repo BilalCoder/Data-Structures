@@ -1,6 +1,4 @@
-package DummyStackUsingArray;
-
-import java.util.Arrays;
+package stackUsingArray;
 
 public class Main {
     public static void main(String[] args) {

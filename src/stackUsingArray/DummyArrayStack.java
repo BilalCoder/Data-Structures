@@ -1,4 +1,4 @@
-package DummyStackUsingArray;
+package stackUsingArray;
 
 import java.util.Arrays;
 
